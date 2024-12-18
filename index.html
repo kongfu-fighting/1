@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝藏猎人</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="data-display"></div>
+    <div id="start-screen">
+        <h1>谁才是最后的赢家</h1>
+        <form id="character-form">
+            <label for="character-name">猎人名称:</label>
+            <input type="text" id="character-name" required>
+            <button type="submit">创建角色并开始</button>
+        </form>
+    </div>
+
+    <div id="game-board" class="hidden">
+        <div id="character"></div>
+        <div id="clue"></div>
+    </div>
+    <div id="popup" class="hidden">
+        <p>历史性难题(考验您是否得以配位): 2 * 3 = ?</p>
+        <input type="text" id="answer">
+        <button onclick="checkAnswer()">提交</button>
+    </div>
+
+    <div id="temple-map" class="hidden">
+        <div id="treasure"></div>
+        <div id="guard"></div>
+    </div>
+    <div id="result-popup" class="hidden">
+        <p id="result-message"></p>
+        <button onclick="restartGame()">重新开始</button>
+    </div>
+    
+    <button id="toggle-music-btn">开启/关闭背景音乐</button>
+    <audio id="background-music" loop>
+
+        <source src="background-music.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="main.js"></script>
+</body>
+</html>

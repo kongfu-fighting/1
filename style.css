@@ -1,0 +1,155 @@
+/* 设置body的样式 */
+body {
+    display: flex; /* 使用flex布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 100vh; /* 设置高度为视口高度 */
+    margin: 0; /* 清除默认的外边距 */
+    background-image: url('background.jpg'); /* 设置背景图片 */
+    background-size: cover; /* 背景图片覆盖整个容器 */
+    background-position: center; /* 背景图片居中显示 */
+}
+
+/* 设置游戏板样式 */
+#game-board {
+    position: relative; /* 相对定位 */
+    width: 80%; /* 宽度设为视口宽度的80% */
+    max-width: 600px; /* 最大宽度为600px */
+    height: 80vh; /* 高度设为视口高度的80% */
+    max-height: 600px; /* 最大高度为600px */
+    border: 2px solid black; /* 边框为2px的黑色实线 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+    background-color: rgba(255, 255, 255, 0.9); /* 设置背景颜色，增加可读性 */
+    border-radius: 10px; /* 圆角边框 */
+    overflow: hidden; /* 隐藏溢出内容 */
+}
+
+/* 设置角色样式 */
+#character {
+    width: 50px; /* 宽度为50px */
+    height: 50px; /* 高度为50px */
+    position: absolute; /* 绝对定位 */
+    background-image: url('character.png'); /* 设置背景图片 */
+    background-size: cover; /* 背景图片覆盖整个容器 */
+    border-radius: 50%; /* 圆形角色 */
+}
+
+/* 设置线索样式 */
+#clue { 
+    width: 50px; /* 宽度为50px */
+    height: 50px; /* 高度为50px */
+    position: absolute; /* 绝对定位 */
+    background-image: url('clue.png'); /* 设置背景图片 */
+    background-size: cover; /* 背景图片覆盖整个容器 */
+    border-radius: 50%; /* 圆形线索 */
+}
+
+/* 设置隐藏样式 */
+.hidden {
+    display: none; /* 隐藏 */
+}
+
+/* 设置弹出框样式 */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 10px; /* 圆角边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+}
+
+/* 寺庙地图样式 */
+#temple-map {
+    position: relative;
+    width: 100%; /* 宽度设为游戏板的100% */
+    height: 100%; /* 高度设为游戏板的100% */
+    border: 2px solid black;
+    background-image: url('temple.jpg');
+    background-size: cover;
+    background-position: center; /* 背景图片居中显示 */
+}
+
+/* 宝藏和守卫样式 */
+#treasure, #guard {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+/* 宝藏样式 */
+#treasure {
+    background-image: url('treasure.png');
+    background-size: cover;
+    border-radius: 50%; /* 圆形宝藏 */
+}
+
+/* 守卫样式 */
+#guard {
+    background-image: url('guard.png');
+    background-size: cover;
+    border-radius: 50%; /* 圆形守卫 */
+}
+
+/* 结果弹出框样式 */
+#result-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 10px; /* 圆角边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+}
+
+/* 开始屏幕样式 */
+#start-screen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 10px; /* 圆角边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+}
+
+/* 背景音乐样式 */
+#background-music {
+    display: none;
+}
+
+#data-display {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid black;
+    padding: 10px;
+    z-index: 1000; /* 确保它在所有其他元素之上 */
+    text-align: center;
+    font-size: 16px; /* 设置字体大小 */
+}
+
+/* 加载指示器样式 */
+#loading-indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* 添加背景颜色 */
+    padding: 10px;
+    border-radius: 5px; /* 圆角边框 */
+}
